@@ -39,7 +39,7 @@
 
 Алгоритм работает за `O(n log n)`, при этому все, кроме сортировки работает за `O(n)`. Важно обратить внимание на выбор хеш функции. Пример: пусть есть дерево (1, 2), (1, 3), (1, 4) и дерево (1, 2), (1, 3), (3, 4), (3, 5). Хеш от вектора определяется функцией: 
  ⁣  ⁣  ⁣  ⁣  ⁣  ⁣  ⁣  ⁣  ⁣ ~n~
- 31^n^+∑ 31^n-i^ * a~i~
+ 31^n^+∑ 31^n^-^i * a~i~
 ⁣  ⁣  ⁣  ⁣  ⁣⁣  ⁣  ⁣  ⁣  ^i=1^
 `Деревья различны` и их `хэш функции различны`, из чего можно сделать вывод о том, что деревья не изоморфны.
 Ограничения:
@@ -55,7 +55,7 @@
 | $$O(nlog(n))$$ |
 -----------------------------
 # 3. Реализация
-[Исходный код](https://github.com/RandomServant/Van-Emde-Boas-tree/tree/master/vEB%20Tree).
+[Исходный код](https://github.com/wortqp/IsomorphismOfTrees).
 ## 3.1 Структура
 ### 3.1.1 Поля дерева (Tree)
 - `nodes` - список (вектор) всех узлов в дереве.
@@ -64,7 +64,7 @@
     private List<Node> nodes = new ArrayList<>();
     private Map<List<Integer>, Integer> numbers;
 ```
-| ![fieldTree](https://intuit.ru/EDI/28_02_18_2/1519770187-3646/tutorial/138/objects/12/files/12_2.gif) |
+| ![fieldTree](https://github.com/wortqp/IsomorphismOfTrees/blob/master/images/fieldTree.png) |
 | :--: |
 | Рис. 2: Представление дерева в алгоритме. |
 
@@ -74,7 +74,7 @@
 ```java
     private List<Node> subNodes = new ArrayList<>();
 ```
-| ![fieldSubNodes](https://intuit.ru/EDI/28_02_18_2/1519770187-3646/tutorial/138/objects/12/files/12_2.gif) |
+| ![fieldSubNodes](https://github.com/wortqp/IsomorphismOfTrees/blob/master/images/fieldSubNodes.png) |
 | :--: |
 | Рис. 3: Связанные узлы узла 1. |
 ### 3.1.3 Конструктор

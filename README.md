@@ -191,3 +191,45 @@ int hashCode() {
 }
 ```
 ## 3.2 Поддерживаемые операции
+### 3.2.1 isomorphic(other)
+- `isomorphic(other)`- определяет изоморны ли деревья.
+- `Node.isomorphic(parent)` - вспомогательный метод для `isomorphic(other)`, который рекурсивно проходит по всем узлам дерева и возвращает номер хеша списка (вектора) хешей детей.
+
+```java
+public boolean isomorphic(Tree other) {
+    if (nodes.isEmpty() || other.nodes.isEmpty())
+        return true;
+    if (nodes.size() != other.nodes.size())
+        return false;
+
+    numbers = new HashMap<>();
+    Node root = nodes.get(new Random().nextInt(nodes.size()));
+    int number = root.isomorphic(null);
+    other.numbers = numbers;
+    for (Node node: other.nodes) {
+        if (number == node.isomorphic(null)) {
+            return true;
+        }
+    }
+    return false;
+}
+```
+**Node**
+```java
+private int isomorphic(Node parent) {
+    List<Integer> nums = new ArrayList<>();
+    for (Node node: subNodes) {
+        if (node != parent)
+            nums.add(node.isomorphic(this));
+    }
+
+    Collections.sort(nums);
+    if (!numbers.containsKey(nums))
+        numbers.put(nums, numbers.size()+1);
+    return numbers.get(nums);
+}
+```
+Даны `два некорневых дерева`. Проверяем, изоморфны ли они. 
+- Возьмем случайно выбранный узел из первого дерева за корень и определим его хеш рекурсивно, как хеш сортированного списка (вектора) хешей детей. 
+- Деревья изоморфны, если хеши корней совпадают, поэтому проходимся по узлам второго дерева, определяя их хеши, и если хоть один совпадает с хешем корня первого дерева, то деревья изоморфны. 
+- При этом хеш функция должна обладать следующим свойством: хеши различных списков (векторов) различны.

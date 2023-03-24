@@ -13,7 +13,7 @@
 **Изоморфизм** - логико-математическое понятие, выражающее одинаковость строения (структуры) систем (процессов, конструкций).
 **Дерево** — одна из наиболее широко распространённых структур данных в информатике, эмулирующая древовидную структуру в виде набора связанных узлов. Является связным графом, не содержащим циклы. Большинство источников также добавляет условие на то, что рёбра графа не должны быть ориентированными. В дополнение к этим трём ограничениям, в некоторых источниках указывается, что рёбра графа не должны быть взвешенными.
 Деревья считаются **изоморфными** в том случае, если они имеют одинаковую структуру, но различный внешний вид.
-| ![isomorphic trees](https://intuit.ru/EDI/28_02_18_2/1519770187-3646/tutorial/138/objects/12/files/12_2.gif) |
+| ![isomorphic trees](https://github.com/wortqp/IsomorphismOfTrees/blob/master/images/trees.png) |
 | :--: |
 | Рис. 1: Изоморфные деревья |
 
@@ -54,7 +54,7 @@
 | $$O(nlog(n))$$ |
 -----------------------------
 # 3. Реализация
-[Исходный код](https://github.com/RandomServant/Van-Emde-Boas-tree/tree/master/vEB%20Tree).
+[Исходный код](https://github.com/wortqp/IsomorphismOfTrees).
 ## 3.1 Структура
 ### 3.1.1 Поля дерева (Tree)
 - `nodes` - список (вектор) всех узлов в дереве.
@@ -63,7 +63,7 @@
     private List<Node> nodes = new ArrayList<>();
     private Map<List<Integer>, Integer> numbers;
 ```
-| ![fieldTree](https://intuit.ru/EDI/28_02_18_2/1519770187-3646/tutorial/138/objects/12/files/12_2.gif) |
+| ![fieldTree](https://github.com/wortqp/IsomorphismOfTrees/blob/master/images/fieldTree.png) |
 | :--: |
 | Рис. 2: Представление дерева в алгоритме. |
 
@@ -72,7 +72,7 @@
 ```java
     private List<Node> subNodes = new ArrayList<>();
 ```
-| ![fieldSubNodes](https://intuit.ru/EDI/28_02_18_2/1519770187-3646/tutorial/138/objects/12/files/12_2.gif) |
+| ![fieldSubNodes](https://github.com/wortqp/IsomorphismOfTrees/blob/master/images/fieldSubNodes.png) |
 | :--: |
 | Рис. 3: Связанные узлы узла 1. |
 ### 3.1.3 Конструктор

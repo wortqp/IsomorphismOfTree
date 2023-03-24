@@ -134,6 +134,8 @@ public Tree(File file) {
 - `get(index)` - берет узел по индексу из списка всех узлов в дереве.
 - `toString()` - возвращает представление дерева в виде стоки.
 - `Node.toString()` - возвращает представление узла в виде стоки.
+- `ArrayList.hashCode()` - вычисляет хеш код для списка (вектора).
+
 
 ```java
 private void add(int index) {
@@ -174,6 +176,18 @@ public String toString() {
 @Override
 public String toString() {
     return "@" + hashCode();
+}
+```
+**ArrayList**
+```java
+int hashCode() {
+   final Object[] es = elementData;
+   int hashCode = 1;
+   for (int i = from; i < to; i++) {
+       Object e = es[i];
+       hashCode = 31 * hashCode + (e == null ? 0 : e.hashCode());
+   }
+   return hashCode;
 }
 ```
 ## 3.2 Поддерживаемые операции

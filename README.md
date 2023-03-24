@@ -91,37 +91,42 @@ $$31^n+\sum_{i=1}^{n} 31^{n-i}*a_i$$
 ```
 ```java
 public Tree(File file) {
-    try (BufferedReader in = new BufferedReader(new FileReader(file))
-        String str;
-        while ((str = in.readLine()) != null
-            Matcher matcher = Pattern.compile("\\d+").matcher(str);
-            if (matcher.find()) {
-                int node = Integer.parseInt(matcher.group());
-                add(node);
-                while (matcher.find()) {
-                    int subNode = Integer.parseInt(matcher.group());
-                    add(subNode);
-                    List<Node> subNodes = get(node).subNodes;
-                    subNodes.add(get(subNode));
+        try (BufferedReader in = new BufferedReader(new FileReader(file))) {
+
+            String str;
+            while ((str = in.readLine()) != null) {
+
+                Matcher matcher = Pattern.compile("\\d+").matcher(str);
+                if (matcher.find()) {
+                    int node = Integer.parseInt(matcher.group());
+                    add(node);
+                    while (matcher.find()) {
+                        int subNode = Integer.parseInt(matcher.group());
+                        add(subNode);
+                        List<Node> subNodes = get(node).subNodes;
+                        subNodes.add(get(subNode));
+                    }
                 }
-          
-      
-        for (int i = 0; i < nodes.size(); i++)
-            if (nodes.get(i) == null) {
-                nodes.remove(i);
-                i--;
+
             }
-        try {
-            isomorphic(this);
-        } catch (StackOverflowError e) {
-            nodes.clear();
-            System.err.println("Invalid data tree have loop. File: " + file);
-      
-    } catch (FileNotFoundException e) {
-        System.err.println(e.getMessage());
-    } catch (IOException e) {
-        throw new RuntimeException(e);
-    }
+
+            for (int i = 0; i < nodes.size(); i++)
+                if (nodes.get(i) == null) {
+                    nodes.remove(i);
+                    i--;
+                }
+            try {
+                isomorphic(this);
+            } catch (StackOverflowError e) {
+                nodes.clear();
+                System.err.println("Invalid data tree have loop. File: " + file);
+            }
+
+        } catch (FileNotFoundException e) {
+            System.err.println(e.getMessage());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 }
 ```
 ### 3.1.4 Вспомогательные функции

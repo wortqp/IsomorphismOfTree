@@ -512,7 +512,10 @@ public static void main(String[] args) {
 - На вход - *Sample10*.
 - Ожидаемый результат: `"Invalid data tree have loop. File: src/resources/Sample10_invalid_data\n"` - некорректные данные.
 
-## 4.3 Вывод в консоль
+## 4.3 Вывод
+Тестируется класс `Tree`:
+- успешных пройденных тестов `9`
+- проваленных тестов `0`
 ```
 Testing class {isomorphismoftrees.Tree}
 ---------------------------------------

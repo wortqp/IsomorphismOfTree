@@ -202,6 +202,7 @@ int hashCode() {
 | :--: |
 | Рис. 4: Рассматриваемые деревья. |
 - Случайно выберем узел, например `4`.
+
 | ![exampleTrees](https://github.com/wortqp/IsomorphismOfTrees/blob/master/images/exFrame2.png) |
 | :--: |
 | Рис. 5: Рассматриваемые деревья. |

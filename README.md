@@ -430,7 +430,7 @@ public static void main(String[] args) {
         }
     }
 ```
-`testIsomorphicStruct1()` - проверяет деревья с одинаковой структурой:
+`testIsomorphicStruct1()` - проверяет деревья с одинаковой структурой
 
     На вход - *Sample1*, *Sample2*.
     
@@ -438,19 +438,19 @@ public static void main(String[] args) {
 
 `testIsomorphicStruct2()` - проверяет деревья с одинаковой структурой:
 
-    На вход - *Sample3*, *Sample4*.
+На вход - *Sample3*, *Sample4*.
     
-    Ожидаемый результат: `true` - деревья изоморфны.
+Ожидаемый результат: `true` - деревья изоморфны.
 
 `testNonIsomorphicStruct1Struct3()` - проверяет деревья с разной структурой:
 
-    На вход - *Sample1*, *Sample5*.
+   На вход - *Sample1*, *Sample5*.
     
-    Ожидаемый результат: `false` - деревья  не изоморфны.
+   Ожидаемый результат: `false` - деревья  не изоморфны.
 
 `testNonIsomorphicDifferentQuantityNodes()` - проверяет деревья с разным количеством узлов:
 
-    На вход - *Sample7*, *Sample8*.
+   На вход - *Sample7*, *Sample8*.
     
     Ожидаемый результат: `false` - деревья не изоморфны.
 

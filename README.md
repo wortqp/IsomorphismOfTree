@@ -297,7 +297,9 @@ private int isomorphic(Node parent) {
 - данные вида число: `число*1* число*2* ... число*n*` - индексы узлов, на которые он ссылается.
 
 **Примеры**
-`Sample1_6nodes_structure1`
+```
+Sample1_6nodes_structure1
+```
 - SampleX - номер примера.
 - Xnodes - кол-во узлов.
 - structureX - структура дерева. 
@@ -311,13 +313,85 @@ private int isomorphic(Node parent) {
 5: 2
 6: 4
 ```
+*Sample2_6nodes_structure1*
+```
+1: 2 3
+2: 1 4 5
+3: 1
+4: 2 6
+5: 2
+6: 4
+```
+*Sample3_10nodes_structure2*
+```
+1: 2 7 8
+2: 1 3 4
+3: 2
+4: 2 5 6
+5: 4
+6: 4
+7: 1
+8: 1 9 10
+9: 8
+10: 8
+```
+*Sample4_10nodes_structure2*
+```
+1: 2
+2: 1 3 6
+3: 2 4 5
+4: 3
+5: 3
+6: 2 7 10
+7: 6 8 9
+8: 7
+9: 7
+10: 6
+```
+*Sample5_6nodes_structure3*
+```
+1: 2
+2: 1 4 5
+3: 5
+4: 2
+5: 2 3 6
+6: 5
+```
+*Sample6_4nodes_structure4*
+```
+1: 2 3 4
+2: 1
+3: 1
+4: 1
+```
+*Sample7_5nodes_structure5*
+```
+1: 2 3
+2: 1
+3: 1 4 5
+4: 3
+5: 3
+```
+*Sample8_8nodes_structure6*
+```
+1: 2 5 8
+2: 1 3 4
+3: 2
+4: 2
+5: 1 6 7
+6: 5
+7: 5
+8: 1
+```
+*Sample9_Empty*
+```
 
+```
+*Sample10_invalid_data*
+```
+(((1ss": 2 1
+2:fg 1  5
 
-
-
-
-
-
-
-
-
+5: 2 6 acb 1
+6:]\]-\ -5
+```

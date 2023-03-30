@@ -51,8 +51,8 @@ public class Tree {
 
 
     public boolean isomorphic(Tree other) {
-        if (nodes.isEmpty() || other.nodes.isEmpty())
-            return nodes.isEmpty() && other.nodes.isEmpty();
+        if (nodes.isEmpty() && other.nodes.isEmpty())
+            return true;
         if (nodes.size() != other.nodes.size())
             return false;
 

@@ -225,9 +225,9 @@ int hashCode() {
 
 1. После вызова этого метода на экземпляре дерева:
 
-    1.1 Проверяем, не пусты ли оба дерева, если пусты, то возвращаем `true`.
+    1.1 Проверяем, не пусты ли оба дерева, если пусты, то возвращаем `true` - *деревья изоморфны*.
     
-    1.2 Проверяем, равны ли размеры деревьев, если нет, то возвращаем `false`.
+    1.2 Проверяем, равны ли размеры деревьев (количество узлов), если нет, то возвращаем `false` - *деревья не изоморфны*.
     
     1.3 Создаем новый `Map` для `numbers`.
     
@@ -403,4 +403,75 @@ Sample1_6nodes_structure1
 
 5: 2 6 acb 1
 6:]\]-\ -5
+```
+## 4.2 Тесты
+Тестовый класс `TreeTest` по очереди запускает все тесты, выводит их результаты и считает кол-во успешных и неуспешных.
+```java
+public static void main(String[] args) {
+        TreeTest tt = new TreeTest();
+        System.setOut(new PrintStream(new ByteArrayOutputStream()));
+        tt.out.println("\nTesting class {isomorphismoftrees.Tree}");
+        tt.out.println("---------------------------------------");
+        tt.testIsomorphicStruct1();
+        tt.testIsomorphicStruct2();
+        tt.testNonIsomorphicStruct1Struct3();
+        tt.testNonIsomorphicDifferentQuantityNodes();
+        tt.testIsomorphicItself();
+        tt.testIsomorphicEmpty();
+        tt.testIsomorphicEmptyStruct5();
+        tt.testNonExistentFile();
+        tt.testInvalidData();
+        tt.out.println("---------------------------------------");
+        tt.out.println("Successful tests: " + tt.successCount);
+        if (tt.failureCount > 0){
+            System.err.println("Failed tests: " + tt.failureCount);
+        } else {
+            tt.out.println("Failed tests: " + tt.failureCount);
+        }
+    }
+```
+`testIsomorphicStruct1()` - проверяет деревья с одинаковой структурой:
+На вход - *Sample1*, *Sample2*
+Ожидаемый результат: `true` - деревья изоморфны.
+`testIsomorphicStruct2()` - проверяет деревья с одинаковой структурой:
+На вход - *Sample3*, *Sample4*
+Ожидаемый результат: `true` - деревья изоморфны.
+`testNonIsomorphicStruct1Struct3()` - проверяет деревья с разной структурой:
+На вход - *Sample1*, *Sample5*
+Ожидаемый результат: `false` - деревья  не изоморфны.
+`testNonIsomorphicDifferentQuantityNodes()` - проверяет деревья с разным количеством узлов: 
+На вход - *Sample7*, *Sample8*
+Ожидаемый результат: `false` - деревья не изоморфны.
+`testIsomorphicItself()` - проверяет один и тот же объект дерева:
+На вход - *Sample8*
+Ожидаемый результат: `true` - дерево изоморфно самому себе.
+`testIsomorphicEmpty()` - проверяет пустые деревья 
+На вход - *Sample9*, *Sample9*
+Ожидаемый результат: `true` - деревья изоморфны.
+`testIsomorphicEmptyStruct5()` - проверяет пустое и непустое деревья: 
+На вход - *Sample9*, *Sample7*
+Ожидаемый результат: `false` - деревья не изоморфны.
+`testNonExistentFile()` - пытается считать данные из несуществующего файла:
+На вход - *not_exist* (такого файла нет)
+Ожидаемый результат: `"src/resources/not_exist (Нет такого файла или каталога)\n"` - нет такого файла.
+`testInvalidData()` - пытается считать некорректные данные:
+На вход - *Sample10*
+Ожидаемый результат: `"Invalid data tree have loop. File: src/resources/Sample10_invalid_data\n"` - некорректные данные.
+
+## 4.3 Вывод в консоль
+```
+Testing class {isomorphismoftrees.Tree}
+---------------------------------------
+Success: testIsomorphicStruct1 - are isomorphic, same quantity nodes and structure
+Success: testIsomorphicStruct2 - are isomorphic, same quantity nodes and structure
+Success: testNonIsomorphicStruct1Struct3 - aren't isomorphic, different structure
+Success: testNonIsomorphicDifferentQuantityNodes - aren't isomorphic, different quantity nodes
+Success: testIsomorphicItself - is isomorphic, check itself
+Success: testIsomorphicEmpty - are isomorphic, both empty
+Success: testIsomorphicEmptyStruct5 - aren't isomorphic, one of them is empty
+Success: testNonExistentFile - print to error stream not exist file
+Success: testInvalidData - print to error stream file contains invalid data
+---------------------------------------
+Successful tests: 9
+Failed tests: 0
 ```

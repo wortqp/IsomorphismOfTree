@@ -313,6 +313,7 @@ Sample1_6nodes_structure1
 5: 2
 6: 4
 ```
+
 *Sample2_6nodes_structure1*
 ```
 1: 2 3
@@ -322,6 +323,7 @@ Sample1_6nodes_structure1
 5: 2
 6: 4
 ```
+
 *Sample3_10nodes_structure2*
 ```
 1: 2 7 8
@@ -335,6 +337,7 @@ Sample1_6nodes_structure1
 9: 8
 10: 8
 ```
+
 *Sample4_10nodes_structure2*
 ```
 1: 2
@@ -348,6 +351,7 @@ Sample1_6nodes_structure1
 9: 7
 10: 6
 ```
+
 *Sample5_6nodes_structure3*
 ```
 1: 2
@@ -357,6 +361,7 @@ Sample1_6nodes_structure1
 5: 2 3 6
 6: 5
 ```
+
 *Sample6_4nodes_structure4*
 ```
 1: 2 3 4
@@ -364,6 +369,7 @@ Sample1_6nodes_structure1
 3: 1
 4: 1
 ```
+
 *Sample7_5nodes_structure5*
 ```
 1: 2 3
@@ -372,6 +378,7 @@ Sample1_6nodes_structure1
 4: 3
 5: 3
 ```
+
 *Sample8_8nodes_structure6*
 ```
 1: 2 5 8
@@ -383,10 +390,12 @@ Sample1_6nodes_structure1
 7: 5
 8: 1
 ```
+
 *Sample9_Empty*
 ```
 
 ```
+
 *Sample10_invalid_data*
 ```
 (((1ss": 2 1

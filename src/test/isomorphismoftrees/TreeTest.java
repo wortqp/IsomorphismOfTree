@@ -85,6 +85,19 @@ public class TreeTest {
         }
     }
 
+    public void testIsomorphicEmptyStruct5() {
+        Tree tree = new Tree(new File("src/resources/Sample9_Empty"));
+        Tree otherTree = new Tree(new File("src/resources/Sample7_5nodes_structure5"));
+
+        if (!tree.isomorphic(otherTree)) {
+            successCount++;
+            out.println("Success: testIsomorphicEmptyStruct5 - aren't isomorphic, one of them is empty");
+        } else {
+            failureCount++;
+            System.err.println("Failure: testIsomorphicEmptyStruct5 - shouldn't be isomorphic, one of them is empty");
+        }
+    }
+
     public void testNonExistentFile() {
         ByteArrayOutputStream buffer = new ByteArrayOutputStream();
         PrintStream err = System.err;
@@ -127,10 +140,15 @@ public class TreeTest {
         tt.testNonIsomorphicDifferentQuantityNodes();
         tt.testIsomorphicItself();
         tt.testIsomorphicEmpty();
+        tt.testIsomorphicEmptyStruct5();
         tt.testNonExistentFile();
         tt.testInvalidData();
         tt.out.println("---------------------------------------");
         tt.out.println("Successful tests: " + tt.successCount);
-        tt.out.println("Failed tests: " + tt.failureCount);
+        if (tt.failureCount > 0){
+            System.err.println("Failed tests: " + tt.failureCount);
+        } else {
+            tt.out.println("Failed tests: " + tt.failureCount);
+        }
     }
 }

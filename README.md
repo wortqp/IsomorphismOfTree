@@ -549,4 +549,13 @@ Failed tests: 0
 ```
 
 # Иссточники
-1. ntuit.ru/studies/courses/58/58/lecture/1730?page=2#:~:text=Два%20корневых%20дерева%20называются%20изоморфными,одного%20дерева%20в%20корень%20другого.
+1. (ntuit.ru/studies/courses/58/58/lecture/1730?page=2#:~:text=Два%20корневых%20дерева%20называются%20изоморфными,одного%20дерева%20в%20корень%20другого.)
+2. (https://ru.algorithmica.org/cs/hashing/isomorphism/)
+3. (https://www.youtube.com/watch?v=RI9UjijHqow&t=2875s)
+4. (https://wiki.algocode.ru/index.php?title=%D0%A5%D0%B5%D1%88%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BA%D0%BE%D1%80%D0%BD%D0%B5%D0%B2%D1%8B%D1%85_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D1%8C%D0%B5%D0%B2)
+5. (https://logic.pdmi.ras.ru/~elena/ulanova-sum.pdf)
+6. (https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F_%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2)
+7. (http://algolist.ru/ds/)
+8. Зимняя школа по программированию, Харьков, 2013.
+9. (https://math.fandom.com/ru/wiki/%D0%98%D0%B7%D0%BE%D0%BC%D0%BE%D1%80%D1%84%D0%B8%D0%B7%D0%BC)
+10. (https://otus.ru/journal/derevo-kak-struktura-dannyh/)

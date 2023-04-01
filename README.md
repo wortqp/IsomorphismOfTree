@@ -547,3 +547,6 @@ Success: testInvalidData - print to error stream file contains invalid data
 Successful tests: 9
 Failed tests: 0
 ```
+
+# Иссточники
+1. ntuit.ru/studies/courses/58/58/lecture/1730?page=2#:~:text=Два%20корневых%20дерева%20называются%20изоморфными,одного%20дерева%20в%20корень%20другого.
